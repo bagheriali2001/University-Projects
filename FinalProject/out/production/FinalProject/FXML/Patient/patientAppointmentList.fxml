@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #2c2c2c;" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientAppointmentList">
+   <ListView fx:id="appointmentListView" onMouseClicked="#listViewChange" prefHeight="480.0" prefWidth="320.0" styleClass="listView" />
+   <VBox prefHeight="480.0" prefWidth="500.0">
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0">
+         <Text fx:id="doctorText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor : " visible="false">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Text>
+         <Text fx:id="doctorNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="docName" visible="false">
+            <HBox.margin>
+               <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+         </Text>
+         <Text fx:id="specialityText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Speciality : " visible="false">
+            <HBox.margin>
+               <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+         </Text>
+         <Text fx:id="specialityTypeText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="docspeciality" visible="false">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Text>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="160.0" prefWidth="400.0">
+         <Text fx:id="reasonText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Reason : " visible="false">
+            <HBox.margin>
+               <Insets bottom="100.0" right="5.0" />
+            </HBox.margin>
+         </Text>
+         <TextArea fx:id="reasonTextArea" editable="false" prefHeight="160.0" prefWidth="280.0" styleClass="text-area" visible="false">
+            <HBox.margin>
+               <Insets bottom="10.0" left="15.0" top="10.0" />
+            </HBox.margin>
+         </TextArea>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0">
+         <children>
+            <Text fx:id="dateRequestedText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Requested : " visible="false">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Text>
+            <DatePicker fx:id="dateRequestedDatePicker" editable="false" prefWidth="150.0" styleClass="date-picker" visible="false">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Button fx:id="openFileButton" mnemonicParsing="false" onAction="#openFile" text="Open File" visible="false">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0">
+         <Text fx:id="appointmentStatusText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Status : " visible="false">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Text>
+         <Text fx:id="appointmentStatusTextAnswer" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin>
+         </Text>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="130.0" prefWidth="400.0">
+         <Text fx:id="doctorAnswerText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Answer : " visible="false">
+            <HBox.margin>
+               <Insets right="5.0" />
+            </HBox.margin>
+         </Text>
+         <TextArea fx:id="doctorAnswerTextArea" editable="false" prefHeight="130.0" prefWidth="280.0" styleClass="text-area" visible="false">
+            <HBox.margin>
+               <Insets bottom="10.0" left="5.0" top="10.0" />
+            </HBox.margin>
+         </TextArea>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0">
+         <Button fx:id="goToChatButton" disable="true" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Go To Chat" textFill="WHITE" visible="false">
+            <HBox.margin>
+               <Insets right="25.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="goToInformationButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Go To Information" textFill="WHITE" visible="false">
+            <HBox.margin>
+               <Insets left="25.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="400.0">
+         <Button fx:id="backToRequestAppointmentPageButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Back to Request Appointment Page" textFill="WHITE">
+            <HBox.margin>
+               <Insets right="25.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="backToMenuButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Back to Menu" textFill="WHITE">
+            <HBox.margin>
+               <Insets left="25.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+   </VBox>
+</HBox>

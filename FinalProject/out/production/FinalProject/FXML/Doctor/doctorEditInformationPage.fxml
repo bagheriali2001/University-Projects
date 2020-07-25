@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c2c2c;" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DoctorEditInformationPage">
+    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="720.0">
+        <Text fill="WHITE"  strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Description" />
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="150.0" prefWidth="720.0">
+        <Text fill="WHITE"  strokeType="OUTSIDE" strokeWidth="0.0" text="Your Description : ">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextArea styleClass="text-area"  fx:id="informationTextArea" prefHeight="150.0" prefWidth="500.0">
+            <HBox.margin>
+                <Insets bottom="5.0" left="10.0" top="5.0" />
+            </HBox.margin>
+        </TextArea>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+        <Text fill="WHITE"  strokeType="OUTSIDE" strokeWidth="0.0" text="New Post Title : ">
+           <HBox.margin>
+               <Insets right="10.0" />
+           </HBox.margin>
+        </Text>
+        <TextField styleClass="text-field"  fx:id="newPostTitleTextField" prefWidth="500.0">
+           <HBox.margin>
+               <Insets left="30.0" />
+           </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="150.0" prefWidth="720.0">
+        <Text fill="WHITE"  strokeType="OUTSIDE" strokeWidth="0.0" text="New Post Content : ">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextArea styleClass="text-area"  fx:id="newPostContentTextArea" prefHeight="150.0" prefWidth="500.0">
+            <HBox.margin>
+                <Insets bottom="5.0" left="10.0" top="5.0" />
+            </HBox.margin>
+        </TextArea>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Text fill="WHITE"  fx:id="ERRORText" strokeType="OUTSIDE" strokeWidth="0.0"/>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+        <Button fx:id="updateInformationButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Update Information" textFill="WHITE" styleClass="button">
+            <HBox.margin>
+                <Insets right="25.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="uploadNewPostButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Upload New Post" textFill="WHITE" styleClass="button">
+            <HBox.margin>
+                <Insets left="25.0" right="25.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="seeAllThePostButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Saw All The Post" textFill="WHITE" styleClass="button">
+            <HBox.margin>
+                <Insets left="25.0" right="25.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="backToMenuButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Back to Menu" textFill="WHITE" styleClass="button">
+            <HBox.margin>
+                <Insets left="25.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>

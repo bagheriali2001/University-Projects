@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefWidth="720.0" style="-fx-background-color: #2c2c2c;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SceneController">
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Width : ">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="widthTextField" prefWidth="50.0" promptText="Width" style="-fx-background-color: black; -fx-text-fill: white; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </TextField>
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Heigh : ">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="heightTextField" prefWidth="50.0" promptText="Height" style="-fx-background-color: black; -fx-text-fill: white; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </TextField>
+        <Button fx:id="setCells" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;" text="Set Cells" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="populate" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;" text="Populate" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="randomPopulate" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;" text="Random Populate" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="start" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;" text="Start" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="goOneStep" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;" text="Go One Step" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Button>
+        <Button fx:id="restart" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black; -fx-border-color: #ffff59; -fx-border-radius: 10; -fx-background-radius: 10;" text="Restart" textFill="WHITE">
+            <HBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="670.0" prefWidth="720.0">
+        <GridPane fx:id="cellsGrid" alignment="CENTER" style="-fx-background-color: #2c2c2c;">
+
+        </GridPane>
+    </HBox>
+</VBox>
