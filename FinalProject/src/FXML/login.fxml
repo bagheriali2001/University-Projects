@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" style="-fx-background-color: #2c2c2c;" stylesheets="@../Css/style.css" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Login">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <HBox alignment="CENTER" prefHeight="90.0" prefWidth="720.0">
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Welcome To Clinic ! ">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Text>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="70.0" prefWidth="720.0" GridPane.rowIndex="1">
+        <Text fill="WHITE"  strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your login information or choose a link below " />
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="70.0" prefWidth="720.0" GridPane.rowIndex="2">
+        <Text fill="WHITE"  fx:id="emailText" strokeType="OUTSIDE" strokeWidth="0.0" text="Email : ">
+            <HBox.margin>
+                <Insets right="30.0" />
+            </HBox.margin>
+        </Text>
+        <TextField styleClass="text-field"  fx:id="emailTextField">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="70.0" prefWidth="720.0" GridPane.rowIndex="3">
+        <Text fill="WHITE"  fx:id="passwordText" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : ">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextField styleClass="text-field"  fx:id="passwordTextField">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="720.0" GridPane.rowIndex="4">
+        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Login" textFill="WHITE">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="720.0" GridPane.rowIndex="5">
+        <Text fill="WHITE"  fx:id="ErrorText" strokeType="OUTSIDE" strokeWidth="0.0" />
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0" GridPane.rowIndex="6">
+        <Text fill="WHITE"  fx:id="signupLink" onMouseClicked="#handleLinkAction" strokeType="OUTSIDE" strokeWidth="0.0" text="You don't have account ?! WoW !! Let's signup . " />
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="70.0" prefWidth="720.0" GridPane.rowIndex="7">
+        <Text fill="WHITE"  fx:id="passwordChangeButton" onMouseClicked="#handleLinkAction" strokeType="OUTSIDE" strokeWidth="0.0" text="You forget your password !! Let's change it .">
+         <HBox.margin>
+            <Insets bottom="20.0" />
+         </HBox.margin></Text>
+      <GridPane.margin>
+         <Insets />
+      </GridPane.margin>
+    </HBox>
+</GridPane>

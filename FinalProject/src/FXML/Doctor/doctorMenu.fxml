@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c2c2c;" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DoctorMenu">
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="720.0">
+      <Text fx:id="helloMassage" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello ... ">
+         <HBox.margin>
+            <Insets right="50.0" />
+         </HBox.margin></Text>
+      <ImageView fx:id="avatarImage" fitHeight="80.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="50.0" />
+         </HBox.margin>
+      </ImageView>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="What do you want to do ? " />
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Button fx:id="editProfileButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Edit My Profile" textFill="WHITE" />
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Button fx:id="appointmentListButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Appointments List" textFill="WHITE" />
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Button fx:id="chatWithPatientButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Chat with Patient" textFill="WHITE" />
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Button fx:id="searchMyPatientInformation" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Search My Patient Information" textFill="WHITE" />
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Button fx:id="editYourInformationButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Edit Your Information Page" textFill="WHITE" />
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="50.0" prefWidth="720.0">
+      <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Log out" textFill="WHITE" />
+   </HBox>
+</VBox>

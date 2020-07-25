@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c2c2c;" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientDoctorsInformationView">
+    <VBox alignment="CENTER" prefHeight="480.0" prefWidth="270.0">
+        <ListView fx:id="doctorsListView" onMouseClicked="#listViewChange" prefHeight="400.0" prefWidth="270.0" styleClass="listView">
+           <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+           </VBox.margin>
+        </ListView>
+        <ChoiceBox fx:id="doctorsChoiceBox" onAction="#choiceBoxChange" prefWidth="210.0">
+           <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+           </VBox.margin>
+        </ChoiceBox>
+    </VBox>
+    <VBox alignment="CENTER" prefHeight="480.0" prefWidth="450.0">
+        <HBox alignment="CENTER" prefHeight="110.0" prefWidth="450.0">
+            <Text fx:id="doctorNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" visible="false">
+            <HBox.margin>
+               <Insets right="25.0" />
+            </HBox.margin></Text>
+         <ImageView fx:id="avatarImage" fitHeight="80.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+            <HBox.margin>
+               <Insets bottom="10.0" left="25.0" top="10.0" />
+            </HBox.margin>
+         </ImageView>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="450.0">
+            <Text fx:id="doctorDescriptionText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Description : " visible="false">
+                <HBox.margin>
+                    <Insets right="10.0" top="30.0" />
+                </HBox.margin>
+            </Text>
+            <TextArea fx:id="informationTextArea" prefHeight="210.0" prefWidth="350.0" styleClass="text-area" visible="false">
+                <HBox.margin>
+                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                </HBox.margin>
+            </TextArea>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="450.0">
+            <Button fx:id="seeDoctorsPostButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Saw Doctors Post" textFill="WHITE">
+                <HBox.margin>
+                    <Insets left="25.0" right="25.0" />
+                </HBox.margin>
+            </Button>
+         <Button fx:id="goToChatButton" disable="true" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Go To Chat" textFill="WHITE" visible="false" />
+            <Button fx:id="backToMenuButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Back to Menu" textFill="WHITE">
+                <HBox.margin>
+                    <Insets left="25.0" />
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </VBox>
+</HBox>

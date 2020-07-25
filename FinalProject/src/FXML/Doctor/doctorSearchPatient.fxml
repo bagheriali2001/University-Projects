@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2c2c2c;" stylesheets="@../../Css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DoctorSearchPatient">
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Patient Information" />
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a Patient : ">
+            <HBox.margin>
+                <Insets right="20.0" />
+            </HBox.margin>
+        </Text>
+        <ChoiceBox fx:id="patientNameChoiceBox" onAction="#choiceBoxViewChange" prefWidth="150.0">
+            <HBox.margin>
+                <Insets left="20.0" right="20.0" />
+            </HBox.margin>
+        </ChoiceBox>
+      <ImageView fx:id="avatarImage" fitHeight="80.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets bottom="5.0" left="20.0" top="5.0" />
+         </HBox.margin>
+      </ImageView>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Text fx:id="firstNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name : ">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="firstNameTextField" editable="false" prefWidth="150.0" styleClass="text-field">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+        </TextField>
+        <Text fx:id="lastNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name : ">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="lastNameTextField" editable="false" prefWidth="150.0" styleClass="text-field">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Text fx:id="birthdayText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday : ">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </Text>
+        <DatePicker fx:id="birthdayDatePicker" editable="false" prefWidth="150.0" styleClass="date-picker">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+        </DatePicker>
+        <Text fx:id="genderText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender : ">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="genderTextField" editable="false" prefWidth="150.0" styleClass="text-field">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <Text fx:id="weightText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight : ">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="weightTextField" editable="false" prefWidth="150.0" styleClass="text-field">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+        </TextField>
+        <Text fx:id="heightText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Height : ">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+        </Text>
+        <TextField fx:id="heightTextField" editable="false" prefWidth="150.0" styleClass="text-field">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <Button fx:id="goToChatButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Go To Chat" textFill="WHITE" visible="false">
+         <HBox.margin>
+            <Insets right="25.0" />
+         </HBox.margin>
+      </Button>
+        <Button fx:id="backToMenuButton" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="button" text="Back to Menu" textFill="WHITE">
+         <HBox.margin>
+            <Insets left="25.0" />
+         </HBox.margin>
+        </Button>
+    </HBox>
+</VBox>
